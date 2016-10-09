@@ -12,6 +12,7 @@ static void pyobjc_internal_init() {
         "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation", RTLD_LAZY);
         if ( foundation == NULL ) {
             printf("Got dlopen error on Foundation\n");
+	    printf(dlerror());
             return;
         }
     }
